@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1118">
+  <title>Springer Root CA — Certificate Validation Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="shell">
+
+<section id="login" class="view active card">
+  <div class="brand">
+    <div class="mark">SR</div>
+    <div>
+      <div class="eyebrow">Springer Root CA</div>
+      <h1>Certificate Validation Portal</h1>
+    </div>
+  </div>
+  <div class="meta">Version 10.0 · Secure connection established</div>
+
+  <div class="login-box">
+    <div class="eyebrow">Authentication required</div>
+    <h2>Access to this certificate requires mutual trust.</h2>
+    <p>Enter the validation date to access the requested certificate.</p>
+    <form id="login-form">
+      <label for="date">Validation date</label>
+      <input id="date" inputmode="numeric" placeholder="TT.MM.JJJJ" maxlength="10">
+      <button type="submit">Validate certificate</button>
+      <div id="login-error" class="error"></div>
+    </form>
+  </div>
+</section>
+
+<section id="validation" class="view card">
+  <div class="eyebrow">Springer Root CA</div>
+  <h1>Certificate validation in progress</h1>
+  <div class="terminal">
+    <div class="terminal-head">trust-validation.log</div>
+    <div id="log" class="terminal-body"></div>
+  </div>
+</section>
+
+<section id="access" class="view card center">
+  <div class="success">✓</div>
+  <div class="eyebrow">Validation completed</div>
+  <h1>Certificate located</h1>
+  <div class="access-grid">
+    <div><span>Classification</span><strong>PERSONAL</strong></div>
+    <div><span>Trust chain</span><strong>INTACT</strong></div>
+    <div><span>Access status</span><strong>GRANTED</strong></div>
+  </div>
+  <button id="open-cert">Open certificate</button>
+</section>
+
+<section id="certificate" class="view certificate">
+  <header class="cert-head">
+    <div>
+      <div class="eyebrow dark">Springer Root CA</div>
+      <h1>Springer Family Trust Certificate</h1>
+      <p>X.509 Family Trust Certificate · Version 10.0</p>
+    </div>
+    <div class="badge"><span>STATUS</span><strong>VALID</strong></div>
+  </header>
+
+  <section class="section">
+    <h2>Certificate Information</h2>
+    <div class="grid two">
+      <dl><dt>Subject</dt><dd>CN = Monique &amp; Benjamin Springer<br>O = Springer Family<br>OU = Marriage Infrastructure<br>C = DE</dd></dl>
+      <dl><dt>Issuer</dt><dd>Springer Root CA</dd></dl>
+      <dl><dt>Serial Number</dt><dd class="mono">SRCA-05082016-10Y-0001</dd></dl>
+      <dl><dt>Certificate Type</dt><dd>X.509 Family Trust Certificate</dd></dl>
+      <dl><dt>Initial Issuance</dt><dd>05.08.2016 · Legal marriage established</dd></dl>
+      <dl><dt>Public Trust Activation</dt><dd>06.08.2016 · Church ceremony completed</dd></dl>
+      <dl><dt>Expiration</dt><dd>05.08.2116</dd></dl>
+      <dl><dt>Revocation Status</dt><dd>NOT REVOKED</dd></dl>
+      <dl><dt>Trust Level</dt><dd>ROOT TRUSTED</dd></dl>
+      <dl><dt>Trust Chain</dt><dd>INTACT</dd></dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Cryptographic Details</h2>
+    <div class="grid two">
+      <dl><dt>Signature Algorithm</dt><dd class="mono">sha512WithRSAEncryption</dd></dl>
+      <dl><dt>Public Key</dt><dd class="mono">RSA 4096 bit</dd></dl>
+      <dl><dt>SHA-256 Family Fingerprint</dt><dd class="mono">05:08:16:06:08:16:17:18:20:25</dd></dl>
+      <dl><dt>Transparency Log ID</dt><dd class="mono">CTS-2016-08-05-000001</dd></dl>
+    </div>
+    <div class="callout">Observed changes: <strong>4 identity additions · 2 animal integrations · 0 trust violations</strong></div>
+  </section>
+
+  <section class="section">
+    <h2>Pre-Issuance Audit</h2>
+    <div class="rows">
+      <div><span>Certificate Signing Request</span><strong>Submitted after extended waiting period</strong></div>
+      <div><span>CSR Processing Time</span><strong class="warn">Significantly exceeded SLA</strong></div>
+      <div><span>Final Decision</span><strong class="ok">APPROVED</strong></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Trusted Identities</h2>
+    <div class="grid two">
+      <div class="identity"><span>2017</span><strong>Ben</strong><small>First child certificate issued</small></div>
+      <div class="identity"><span>2018</span><strong>Mats</strong><small>Family trust chain extended</small></div>
+      <div class="identity"><span>2020</span><strong>Anni</strong><small>Third identity enrolled</small></div>
+      <div class="identity"><span>2025</span><strong>Emil</strong><small>Latest production release</small></div>
+    </div>
+    <p class="micro">Automatic Identity Enrollment: SUCCESS · Rollback: NOT SUPPORTED</p>
+  </section>
+
+  <section class="section">
+    <h2>Integrated Security Components</h2>
+    <div class="grid two">
+      <article class="component">
+        <div class="eyebrow dark">Intrusion Detection System</div>
+        <h3>Hades Security Module</h3>
+        <div class="tag">ACTIVE</div>
+        <ul>
+          <li>Perimeter monitoring</li>
+          <li>Unauthorized visitor detection</li>
+          <li>Fly detection: OUTSTANDING</li>
+          <li>Alert sensitivity: EXTREMELY HIGH</li>
+          <li>False positive rate: ACCEPTABLE</li>
+        </ul>
+      </article>
+      <article class="component">
+        <div class="eyebrow dark">Auxiliary Monitoring System</div>
+        <h3>Funny</h3>
+        <div class="tag">ONLINE</div>
+        <ul>
+          <li>Operating mode: INDEPENDENT</li>
+          <li>Rodent control</li>
+          <li>Perimeter inspection</li>
+          <li>Unscheduled outdoor missions</li>
+          <li>Availability: VARIABLE</li>
+        </ul>
+        <p class="micro">System responds on its own schedule.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Historical Security Incident</h2>
+    <div class="incident">
+      <div class="incident-title">
+        <div>
+          <div class="eyebrow dark">Incident ID</div>
+          <h3>HD-OSTSEE-001</h3>
+        </div>
+        <div class="severity">HIGH</div>
+      </div>
+      <div class="rows">
+        <div><span>Location</span><strong>Baltic Sea Forest</strong></div>
+        <div><span>Affected Component</span><strong>Hades Security Module</strong></div>
+        <div><span>Event Summary</span><strong>Perimeter security system initiated autonomous patrol mode.</strong></div>
+        <div><span>Administrator Response</span><strong>Benjamin attempted manual interception.</strong></div>
+        <div><span>Result</span><strong class="warn">FAILED</strong></div>
+        <div><span>Root Cause</span><strong>Target faster than administrator.</strong></div>
+        <div><span>Civilian Impact</span><strong>Multiple retirees executed successful emergency evasive maneuvers.</strong></div>
+        <div><span>Current Status</span><strong class="ok">CLOSED · Funny in hindsight</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>System Health &amp; Audit Findings</h2>
+    <div class="rows">
+      <div><span>Trust</span><strong class="ok">PASS · 100%</strong></div>
+      <div><span>Loyalty</span><strong class="ok">PASS · 100%</strong></div>
+      <div><span>Teamwork</span><strong class="ok">PASS · 95%</strong></div>
+      <div><span>Communication</span><strong class="obs">OBSERVATION · 80%</strong></div>
+      <div><span>Laundry Queue</span><strong class="warn">CRITICAL · Capacity 127%</strong></div>
+      <div><span>Sibling Communication Service</span><strong class="warn">CONFLICT DETECTION FREQUENT</strong></div>
+      <div><span>Automatic Conflict Resolution</span><strong>UNAVAILABLE</strong></div>
+      <div><span>Parental Intervention</span><strong>REQUIRED</strong></div>
+      <div><span>Sleep Management</span><strong class="warn">BEST EFFORT</strong></div>
+      <div><span>Coffee Dependency</span><strong class="obs">EXPECTED</strong></div>
+      <div><span>Chaos Level</span><strong class="ok">NOMINAL</strong></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Certificate Lifecycle</h2>
+    <ol class="timeline">
+      <li><time>Pre-2016</time><div><strong>CSR pending</strong><span>Processing time exceeded service level agreement.</span></div></li>
+      <li><time>05.08.2016</time><div><strong>Certificate issued</strong><span>Legal marriage established.</span></div></li>
+      <li><time>06.08.2016</time><div><strong>Trust activated</strong><span>Church ceremony completed.</span></div></li>
+      <li><time>2017</time><div><strong>Ben enrolled</strong><span>First child certificate issued.</span></div></li>
+      <li><time>2018</time><div><strong>Mats enrolled</strong><span>Family trust chain extended.</span></div></li>
+      <li><time>2020</time><div><strong>Anni enrolled</strong><span>Third identity added.</span></div></li>
+      <li><time>2025</time><div><strong>Emil enrolled</strong><span>Latest production release.</span></div></li>
+      <li><time>2026</time><div><strong>10-year audit completed</strong><span>Overall result: PASS.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="section final">
+    <div class="eyebrow dark">Overall Audit Result</div>
+    <h2>PASS</h2>
+    <p>The infrastructure remains stable, resilient and fully trusted after 10 years of continuous operation.</p>
+    <p class="mono">No revocation requests on record. Certificate remains trusted.</p>
+  </section>
+
+  <footer class="cert-footer">
+    <div><strong>Certified by Monique Springer</strong><span>Chief Trust Officer</span></div>
+    <div class="mono">Springer Root CA · Version 10.0</div>
+  </footer>
+
+  <button id="attachment" class="attachment">Open Secure Attachment</button>
+</section>
+
+<div id="decrypt-overlay" class="overlay" aria-hidden="true">
+  <div class="decrypt-box">
+    <div class="eyebrow">Springer Root CA</div>
+    <h2>Secure attachment processing</h2>
+    <div id="decrypt-status" class="decrypt-status">Initializing...</div>
+    <div class="progress"><div id="progress-bar"></div></div>
+  </div>
+</div>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
